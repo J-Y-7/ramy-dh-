@@ -69,7 +69,7 @@
             margin-bottom: 15px;
             object-fit: cover;
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-            background: #1a1a1a; /* لون خلفية في حال لم تظهر الصورة */
+            background: #1a1a1a;
         }
 
         header h1 {
@@ -125,13 +125,13 @@
 
     <div id="intro-layer">
         <div id="welcome" class="intro-text">WELCOME TO MY WORLD</div>
-        <div id="brand-name" class="intro-text">DH. Ziad Mohamed Ramy</div>
+        <div id="brand-name" class="intro-text">DR. Ziad Mohamed Ramy</div>
     </div>
 
     <div id="main-content">
         <header>
-            <img src="my-photo.jpeg" alt="DH. Ziad Mohamed Ramy" class="profile-img">
-            <h1>DH. Ziad Mohamed Ramy</h1>
+            <img src="my-photo.jpg" alt="DR. Ziad Mohamed Ramy" class="profile-img">
+            <h1>DR. Ziad Mohamed Ramy</h1>
             <p>CONNECT WITH ME</p>
         </header>
 
@@ -168,7 +168,6 @@
                 intro.style.opacity = '0';
                 setTimeout(() => {
                     intro.style.display = 'none';
-                    main.style.transition = 'opacity 1s ease';
                     main.style.opacity = '1';
                 }, 1500);
             }, 6000);
