@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DH. Ziad Mohamed Ramy | My World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --gold: #d4af37;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Intro Animation --- */
+        #intro-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: black;
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; flex-direction: column;
+        }
+
+        .intro-text {
+            font-size: 1.8rem; letter-spacing: 5px; opacity: 0;
+            position: absolute; text-align: center;
+        }
+
+        #welcome { animation: fadeInOut 3s forwards; }
+        #brand-name { 
+            font-family: 'Satisfy', cursive; 
+            font-size: 3rem; color: var(--gold);
+            animation: fadeInOut 3s forwards 3s; 
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: scale(0.9); filter: blur(10px); }
+            50% { opacity: 1; transform: scale(1); filter: blur(0); }
+            100% { opacity: 0; transform: scale(1.1); filter: blur(10px); }
+        }
+
+        /* --- Main Content --- */
+        #main-content {
+            opacity: 0; width: 100%; max-width: 450px;
+            padding: 40px 20px; text-align: center;
+        }
+
+        /* Profile Image Frame */
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-bottom: 15px;
+            object-fit: cover;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            background: #1a1a1a; /* لون خلفية في حال لم تظهر الصورة */
+        }
+
+        header h1 {
+            font-family: 'Satisfy', cursive;
+            font-size: 2.8rem; color: var(--gold);
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        header p {
+            font-weight: 300; letter-spacing: 3px;
+            margin-bottom: 40px; color: #777; font-size: 0.8rem;
+        }
+
+        /* --- Glass Buttons --- */
+        .links-container { display: flex; flex-direction: column; gap: 15px; }
+
+        .link-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            padding: 16px; border-radius: 15px;
+            text-decoration: none; color: white;
+            display: flex; align-items: center; justify-content: center;
+            gap: 12px; transition: 0.4s ease;
+        }
+
+        .facebook { --glow: #1877F2; }
+        .instagram { --glow: #E1306C; }
+        .tiktok { --glow: #ffffff; }
+        .snapchat { --glow: #FFFC00; }
+        .telegram { --glow: #0088cc; }
+        .whatsapp { --glow: #25D366; }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--glow);
+        }
+
+        .pulse { animation: pulse-animation 2s infinite; }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0px var(--glow); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
+            100% { box-shadow: 0 0 0 0px rgba(0, 0, 0, 0); }
+        }
+
+        footer { margin-top: 50px; padding-bottom: 30px; font-size: 0.7rem; color: #333; letter-spacing: 1.5px;}
+    </style>
+</head>
+<body>
+
+    <div id="intro-layer">
+        <div id="welcome" class="intro-text">WELCOME TO MY WORLD</div>
+        <div id="brand-name" class="intro-text">DH. Ziad Mohamed Ramy</div>
+    </div>
+
+    <div id="main-content">
+        <header>
+            <img src="my-photo.jpeg" alt="DH. Ziad Mohamed Ramy" class="profile-img">
+            <h1>DH. Ziad Mohamed Ramy</h1>
+            <p>CONNECT WITH ME</p>
+        </header>
+
+        <div class="links-container">
+            <a href="https://www.facebook.com/ramy.dreibine" class="link-card facebook pulse">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://www.instagram.com/ziad_mohamed_ramy_" class="link-card instagram pulse">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@ziad_mohamed_ramy" class="link-card tiktok pulse">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+            <a href="https://www.snapchat.com/add/ziad_dreibine" class="link-card snapchat pulse" style="color:#fff;">
+                <i class="fab fa-snapchat-ghost"></i> Snapchat
+            </a>
+            <a href="https://t.me/+213792091302" class="link-card telegram pulse">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+            <a href="https://wa.me/213792091302" class="link-card whatsapp pulse">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+
+        <footer>© 2026 ZIAD MOHAMED RAMY. ALL RIGHTS RESERVED.</footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const intro = document.getElementById('intro-layer');
+                const main = document.getElementById('main-content');
+                intro.style.transition = 'opacity 1.5s ease';
+                intro.style.opacity = '0';
+                setTimeout(() => {
+                    intro.style.display = 'none';
+                    main.style.transition = 'opacity 1s ease';
+                    main.style.opacity = '1';
+                }, 1500);
+            }, 6000);
+        });
+    </script>
+
+</body>
+</html>
